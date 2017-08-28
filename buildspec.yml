@@ -7,11 +7,12 @@ phases:
           - TAG="latest"
      build:
           commands:
-          - docker build -tag "${REPOSITORY}:${TAG}" .
+          - docker build -t cicdtestreop .
+          - docker tag cicdtestrepo:latest 897561443003.dkr.ecr.us-east-2.amazonaws.com/cicdtestrepo:latest
      post_build:
           commands:
-          - docker push "${REPOSITORY}:${TAG}" 
-          - printf '{"Image":"%s:%s"}' $REPOSITORY $TAG > build.json
+          - docker push 897561443003.dkr.ecr.us-east-2.amazonaws.com/cicdtestrepo:latest
+          - printf '{"Image":"%s:%s"}' "cicdtestreop" "latest" > build.json
 artifacts:
      files:
      - build.json
