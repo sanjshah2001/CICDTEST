@@ -1,4 +1,5 @@
-"Paremeters": {
+{
+Paremeters: {
      "Cluster": "Cluster",
      "DesiredCount": "2",
      "Role": "ecsServiceRole",
