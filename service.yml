@@ -27,7 +27,7 @@ TaskDefinition:
      Properties:
           Family: Service
           ContainerDefinitions:
-               - Name: node
+                  Name: node
                   Image: !Ref Image
                   Memory: 8
                   PortMappings: 
