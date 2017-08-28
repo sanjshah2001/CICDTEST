@@ -7,7 +7,7 @@ phases:
           - TAG="$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | head -c 8)"
      build:
           commands:
-          - docket build -tag "${REPOSITORY}:${TAG}" .
+          - docker build -tag "${REPOSITORY}:${TAG}" .
      post_build:
           commands:
           - docker push "${REPOSITORY}:${TAG}" 
