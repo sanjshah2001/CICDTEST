@@ -1,10 +1,10 @@
 "Paremeters": {
-	"Cluster": "Cluster",
-	"DesiredCount": "2",
-	"Role": "ecsServiceRole",
-	"TargetGroupArn": "arn:aws:arn:aws:elasticloadbalancing:us-east-2:897561443003:loadbalancer/app/CICDTEST/48f3ffa5930733b6",
-	"Image": {
-		"Fn::GetParam": ["MyAppBuild", "build.json", "Image"]
-	}
+     "Cluster": "Cluster",
+     "DesiredCount": "2",
+     "Role": "ecsServiceRole",
+     "TargetGroupArn": "arn:aws:arn:aws:elasticloadbalancing:us-east-2:897561443003:loadbalancer/app/CICDTEST/48f3ffa5930733b6",
+     "Image": {
+          "Fn::GetParam": ["MyAppBuild", "build.json", "Image"]
+     }
    }
 }
