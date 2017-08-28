@@ -7,12 +7,12 @@ phases:
           - TAG="latest"
      build:
           commands:
-          - docker build -t cicdtestreop .
-          - docker tag cicdtestrepo:latest 897561443003.dkr.ecr.us-east-2.amazonaws.com/cicdtestrepo:latest
+          - docker build -t cicdnew .
+          - docker tag cicdnew:latest 897561443003.dkr.ecr.us-east-2.amazonaws.com/cicdnew:latest
      post_build:
           commands:
-          - docker push 897561443003.dkr.ecr.us-east-2.amazonaws.com/cicdtestrepo:latest
-          - printf '{"Image":"%s:%s"}' "cicdtestreop" "latest" > build.json
+          - docker push 897561443003.dkr.ecr.us-east-2.amazonaws.com/cicdnew:latest
+          - printf '{"Image":"%s:%s"}' "cicdnew" "latest" > build.json
 artifacts:
      files:
      - build.json
